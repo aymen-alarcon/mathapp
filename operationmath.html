@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opérations Mathématiques</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-10">
-            <h1>opération Mathématique</h1>
-        </div>
-        <div class="col-md-2">
-            <span class="ms-1 mt-1" onclick="close()">x</span>    
-        </div>
+  <div class="container mt-4">
+    <div class="row mb-3">
+      <div class="col-md-10">
+        <h1>Opérations Mathématiques</h1>
+      </div>
+      <div class="col-md-2 text-end">
+        <button class="btn btn-danger" onclick="closeApp()">X</button>
+      </div>
     </div>
+
     <div class="row">
-        <div class="col-md-6">
-            <span>op 1</span>
-            <input type="number" name="op1" class="op" id="op1">
-            <span class="x" onclick="clear1()">x</span><br> 
-            <span>op 2</span>
-            <input type="number" name="op2" class="op" id="op2">
-            <span class="x" onclick="clear2()">x</span><br> 
-            <span>op 3</span>
-            <input type="number" name="op3" class="op" id="op3">
-            <span class="x" onclick="clear3()">x</span><br>
-            <span>Résultat</span> 
-            <input type="number" name="op1" id="result" disabled>
-        </div>
-        <div class="col-md-6">
-            <div class="div" onclick="clearall()">Annuler</div>
-            <div class="div" onclick="add()">Somme</div>
-            <div class="div" onclick="devide()">Différence</div>
-            <div class="div" onclick="x()">Produit</div>
-            <div class="div" onclick="moyenne()">Moyenne</div>
-        </div>
+      <div class="col-md-6">
+        <label>Op 1</label>
+        <input type="number" class="form-control op mb-2" id="op1">
+        <button class="btn btn-sm btn-warning mb-3" onclick="clear1()">Effacer</button>
+
+        <label>Op 2</label>
+        <input type="number" class="form-control op mb-2" id="op2">
+        <button class="btn btn-sm btn-warning mb-3" onclick="clear2()">Effacer</button>
+
+        <label>Op 3</label>
+        <input type="number" class="form-control op mb-2" id="op3">
+        <button class="btn btn-sm btn-warning mb-3" onclick="clear3()">Effacer</button>
+
+        <label>Résultat</label>
+        <input type="text" class="form-control" id="result" disabled>
+      </div>
+
+      <div class="col-md-6 d-grid gap-2">
+        <button class="btn btn-secondary" onclick="clearAll()">Tout Effacer</button>
+        <button class="btn btn-primary" onclick="add()">Somme</button>
+        <button class="btn btn-info" onclick="subtract()">Soustraction</button>
+        <button class="btn btn-success" onclick="multiply()">Produit</button>
+        <button class="btn btn-dark" onclick="divide()">Division</button>
+        <button class="btn btn-warning" onclick="average()">Moyenne</button>
+      </div>
     </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
